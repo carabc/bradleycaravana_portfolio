@@ -1,7 +1,15 @@
-$primary-color: rgb(10, 6, 59);
-$secondary-color: lighten($primary-color, 20);
+$primary-color: #fff;
+$secondary-color: #5ce6ff;
 
 body {
-  background: $primary-color;
-  color: $secondary-color;
+  line-height: 1.5;
+  padding: 0%;
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: rgb(167, 167, 167);
+}
+
+#landing {
+  height: 100vh;
+  background: url('img/trails.jpg');
 }
