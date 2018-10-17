@@ -1,0 +1,15 @@
+{
+  "name": "clean_portfolio",
+  "version": "1.0.0",
+  "description": "Clean/Professional Web Development Portfolio Theme",
+  "main": "index.js",
+  "dependencies": {
+    "node-sass": "^4.9.4"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "sass": "node-sass -w sass/ -o dist/style --recursive"
+  },
+  "author": "CARABC",
+  "license": "ISC"
+}

@@ -1,0 +1,7 @@
+$primary-color: rgb(10, 6, 59);
+$secondary-color: lighten($primary-color, 20);
+
+body {
+  background: $primary-color;
+  color: $secondary-color;
+}
