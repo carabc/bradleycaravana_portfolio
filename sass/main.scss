@@ -1,3 +1,4 @@
+//VARIABLES AND MIXINS
 $primary-color: #fff;
 $secondary-color: #000;
 $show-home-image: true;
@@ -32,7 +33,9 @@ $show-home-image: true;
     }
   }
 }
+//END VARIABLES AND MIXINS
 
+//GLOBAL
 body {
   line-height: 1.5;
   padding: 0%;
@@ -40,6 +43,7 @@ body {
   font-family: 'Open Sans', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background: $primary-color;
 }
+//END GLOBAL
 
 //LANDING HOME PAGE
 
