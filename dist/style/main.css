@@ -1,3 +1,12 @@
+.overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  background: rgba(0, 0, 0, 0.6); }
+
 body {
   line-height: 1.5;
   padding: 0%;
@@ -62,32 +71,6 @@ body {
         font-size: 1.5em;
         letter-spacing: 3px; }
 
-.test {
-  position: relative; }
-  .test.about {
-    background: url("../img/headshot.jpg") 0 -300px;
-    background-size: cover;
-    background-repeat: no-repeat; }
-    .test.about:after {
-      content: '';
-      position: absolute;
-      z-index: -1;
-      top: 0;
-      right: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(0, 0, 0, 0.5); }
-
-.about-container::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  right: 0;
-  z-index: 1;
-  width: 100%;
-  height: 100%;
-  background: rgba(255, 255, 255, 0.6); }
-
 .about {
   border-top: 2px solid #fff;
   padding: 3em;
@@ -103,12 +86,7 @@ body {
     background: url("../img/headshot.jpg") 0 -300px;
     background-size: cover;
     background-repeat: no-repeat; }
-    .about.about:after {
-      content: '';
-      position: absolute;
-      z-index: -1;
-      top: 0;
-      right: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(0, 0, 0, 0.5); }
+  .about-me-container {
+    font-weight: 600;
+    opacity: 100%;
+    position: relative; }

@@ -29,19 +29,18 @@ $show-home-image: true;
       background: url('../img/headshot.jpg') 0 -300px;
       background-size: cover;
       background-repeat: no-repeat;
-
-      &:after {
-        content: '';
-        position: absolute;
-        z-index: -1;
-        top: 0;
-        right: 0;
-        width: 100%;
-        height: 100%;
-        background: rgba($color: $secondary-color, $alpha: 0.5);
-      }
     }
   }
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  background: rgba($color: $secondary-color, $alpha: 0.6);
 }
 
 body {
@@ -118,20 +117,7 @@ body {
 //END LANDING HOME PAGE
 
 //ABOUT ME
-.test {
-  position: relative;
-  @include background2;
-}
-.about-container::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  right: 0;
-  z-index: 1;
-  width: 100%;
-  height: 100%;
-  background: rgba($color: $primary-color, $alpha: 0.6);
-}
+
 .about {
   @include background2;
   border-top: 2px solid $primary-color;
@@ -144,6 +130,12 @@ body {
   align-items: center;
   color: $secondary-color;
   position: relative;
+
+  &-me-container {
+    font-weight: 600;
+    opacity: 100%;
+    position: relative;
+  }
 }
 
 //END ABOUT ME
