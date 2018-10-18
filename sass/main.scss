@@ -50,6 +50,7 @@ body {
   margin: 0;
   font-family: 'Open Sans', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background: $primary-color;
+}
 
 //LANDING HOME PAGE
 
@@ -117,20 +118,32 @@ body {
 //END LANDING HOME PAGE
 
 //ABOUT ME
+.test {
+  position: relative;
+  @include background2;
+}
+.about-container::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  background: rgba($color: $primary-color, $alpha: 0.6);
+}
 .about {
   @include background2;
-  margin-top: 200px;
   border-top: 2px solid $primary-color;
   padding: 3em;
   text-align: center;
   color: $primary-color;
   min-height: 400px;
-
-  .about-me-container {
-    display: grid;
-    justify-content: center;
-    align-items: center;
-    grid-auto-rows: 100px;
-  }
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  color: $secondary-color;
+  position: relative;
 }
+
 //END ABOUT ME
