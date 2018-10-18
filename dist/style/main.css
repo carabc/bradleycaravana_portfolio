@@ -2,9 +2,37 @@ body {
   line-height: 1.5;
   padding: 0%;
   margin: 0;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'Open Sans', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background: #a7a7a7; }
 
 #landing {
-  height: 100vh;
-  background: url("img/trails.jpg"); }
+  min-height: 100vh;
+  overflow: hidden; }
+  #landing .main-nav {
+    padding: 0;
+    margin: 0;
+    text-align: left;
+    margin-top: 30px;
+    min-height: 70px;
+    display: grid;
+    align-items: center; }
+    #landing .main-nav .nav-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      margin-left: 50px; }
+      #landing .main-nav .nav-list .nav-item {
+        display: inline-block;
+        padding: 0 2em 0 2em; }
+        #landing .main-nav .nav-list .nav-item .nav-link {
+          color: rgba(255, 255, 255, 0.7);
+          text-decoration: none; }
+        #landing .main-nav .nav-list .nav-item .nav-link:hover {
+          color: white; }
+  #landing .grid-home {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    grid-auto-rows: 80vh; }
+    #landing .grid-home .grid-wrapper {
+      color: #fff; }
