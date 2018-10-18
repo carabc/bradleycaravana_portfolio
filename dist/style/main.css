@@ -13,15 +13,6 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed; }
-    #landing#landing::after {
-      content: '';
-      position: absolute;
-      z-index: -1;
-      top: 0;
-      right: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(0, 0, 0, 0.5); }
   #landing .main-nav {
     padding: 0;
     margin: 0;
@@ -95,3 +86,92 @@ body {
     position: relative; }
     .about-me-container h1 {
       font-size: 2em; }
+
+.photography {
+  padding: 2em;
+  min-height: 500px; }
+  .photography .photo-header {
+    text-align: center;
+    margin-bottom: 30px; }
+    .photography .photo-header h1 {
+      line-height: 1.2;
+      letter-spacing: 5px; }
+    .photography .photo-header p {
+      font-size: 1.2em; }
+  .photography .photo-body {
+    width: 60%;
+    margin: auto; }
+    .photography .photo-body .photo-body-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      text-align: center;
+      grid-gap: 1em; }
+      .photography .photo-body .photo-body-grid .box {
+        width: 300px;
+        height: 300px; }
+        .photography .photo-body .photo-body-grid .box .box-header img {
+          margin: 0;
+          padding: 0;
+          border: 1px solid #fff;
+          transition: all 0.3s; }
+          .photography .photo-body .photo-body-grid .box .box-header img:hover {
+            opacity: 0.6;
+            border: 1px solid #000;
+            cursor: pointer; }
+        .photography .photo-body .photo-body-grid .box .box-img-caption {
+          background: #0d0d0d;
+          color: #fff;
+          padding: 0;
+          letter-spacing: 0.2em;
+          overflow: hidden;
+          display: grid;
+          justify-content: center;
+          align-items: center; }
+          .photography .photo-body .photo-body-grid .box .box-img-caption p {
+            margin: 0;
+            padding: 0.2em; }
+
+.web-development {
+  padding: 1em;
+  background: #333333;
+  color: #fff;
+  margin-top: 50px;
+  border-top: 2px solid #000;
+  min-height: 700px; }
+  .web-development .web-development-header {
+    text-align: center;
+    margin: 30px 0 30px 0;
+    padding: 1em; }
+    .web-development .web-development-header h1 {
+      line-height: 1.2;
+      letter-spacing: 3px; }
+    .web-development .web-development-header p {
+      font-size: 1.2em; }
+  .web-development .web-development-body {
+    width: 80%;
+    margin: auto; }
+    .web-development .web-development-body .web-dev-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr; }
+      .web-development .web-development-body .web-dev-grid .box {
+        width: 700px;
+        height: 400px; }
+        .web-development .web-development-body .web-dev-grid .box .box-header img {
+          border: 1px solid #333333; }
+          .web-development .web-development-body .web-dev-grid .box .box-header img:hover {
+            border: 1px solid #fff;
+            transition: all 0.3s;
+            opacity: 0.6; }
+        .web-development .web-development-body .web-dev-grid .box .img-caption {
+          background: white;
+          color: #000;
+          padding: 0;
+          letter-spacing: 0.2em;
+          overflow: hidden;
+          display: grid;
+          justify-content: center;
+          align-items: center; }
+          .web-development .web-development-body .web-dev-grid .box .img-caption p {
+            padding: 0.2em;
+            margin: 0;
+            font-weight: 500; }
