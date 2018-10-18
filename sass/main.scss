@@ -39,7 +39,7 @@ $show-home-image: true;
   right: 0;
   width: 100%;
   height: 100%;
-  z-index: 1;
+  z-index: -1;
   background: rgba($color: $secondary-color, $alpha: 0.6);
 }
 
