@@ -5,6 +5,11 @@ body {
   font-family: 'Open Sans', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background: #fff; }
 
+.container {
+  width: 70%;
+  margin: auto;
+  overflow: hidden; }
+
 #landing {
   min-height: 100vh;
   overflow: hidden; }
@@ -157,10 +162,10 @@ body {
         width: 700px;
         height: 400px; }
         .web-development .web-development-body .web-dev-grid .box .box-header img {
-          border: 1px solid #333333; }
+          border: 1px solid #333333;
+          transition: all 0.3s; }
           .web-development .web-development-body .web-dev-grid .box .box-header img:hover {
             border: 1px solid #fff;
-            transition: all 0.3s;
             opacity: 0.6; }
         .web-development .web-development-body .web-dev-grid .box .img-caption {
           background: white;
@@ -175,3 +180,28 @@ body {
             padding: 0.2em;
             margin: 0;
             font-weight: 500; }
+
+.contact {
+  min-height: 600px; }
+  .contact .contact-header {
+    text-align: center;
+    margin: 30px 0 30px 0;
+    padding: 1em; }
+    .contact .contact-header h1 {
+      line-height: 1.2;
+      letter-spacing: 3px; }
+    .contact .contact-header p {
+      font-size: 1.2em; }
+  .contact .contact-grid {
+    text-align: center; }
+    .contact .contact-grid form {
+      padding: 2em; }
+      .contact .contact-grid form label {
+        display: block; }
+      .contact .contact-grid form input {
+        width: 100%;
+        height: 40px; }
+      .contact .contact-grid form textarea {
+        width: 100%;
+        height: 70px;
+        padding: 1em; }
