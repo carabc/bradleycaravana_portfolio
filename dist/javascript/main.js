@@ -37,16 +37,19 @@
 const navBar = document.querySelector('.main-nav');
 const navHeight = navBar.offsetTop;
 const landingContent = document.querySelector('.grid-home');
+const navLink = document.querySelectorAll('.nav-link');
 
 window.addEventListener('scroll', navResize);
 
 function navResize() {
   console.log(navHeight, window.scrollY);
-  if (window.scrollY >= navHeight) {
+  if (window.scrollY > navHeight) {
     landingContent.style.marginTop = navBar.offsetHeight + 'px';
+    navBar.style.minHeight = 50 + 'px';
     document.body.classList.add('resize');
   } else {
     landingContent.style.marginTop = 0;
+    navBar.style.minHeight = 70 + 'px';
     document.body.classList.remove('resize');
   }
 }

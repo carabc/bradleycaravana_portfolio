@@ -1,3 +1,5 @@
+@import 'mobile';
+
 //VARIABLES AND MIXINS
 $primary-color: #fff;
 $secondary-color: #000;
@@ -89,6 +91,10 @@ body {
         .nav-link:hover {
           color: rgba($color: #000, $alpha: 1);
           background: rgba($color: #fff, $alpha: 0.3);
+        }
+
+        .resize nav .nav-item .nav-link:hover {
+          background: none;
         }
       }
     }
@@ -316,6 +322,22 @@ body {
     margin-bottom: 0;
 
     form {
+      .btn {
+        width: 100%;
+        border: none;
+        background: lighten($color: $secondary-color, $amount: 20);
+        padding: 0.5em;
+        display: block;
+        font-size: 1em;
+        color: $primary-color;
+        @include animationEase();
+
+        &:hover {
+          background: lighten($color: $secondary-color, $amount: 40);
+          cursor: pointer;
+        }
+      }
+
       padding: 2em;
 
       label {
@@ -368,16 +390,24 @@ footer {
   position: fixed;
   background: $primary-color;
   min-width: 100%;
-  min-height: 50px;
-  box-shadow: 0 5px rgba($color: $secondary-color, $alpha: 0.2);
+  min-height: 120px;
+}
+//END JAVASCRIPT RELATED, LIKE STICKY NAV ON SCROLL
 
-  .nav-item {
-    padding: 0px;
+//Media Query Mixins
 
-    .nav-link a {
-      color: orange;
-    }
+@media screen and (max-width: 500px) {
+}
+
+@media screen and (max-width: 768px) {
+}
+
+@media screen and (min-width: 769px) and (max-width: 1170px) {
+  .photo-body-grid {
+    display: grid;
+    grid-template-columns: 1fr;
   }
 }
 
-//END JAVASCRIPT RELATED, LIKE STICKY NAV ON SCROLL
+@media screen and (min-width: 1171px) {
+}

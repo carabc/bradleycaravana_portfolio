@@ -48,6 +48,8 @@ body {
         #landing .main-nav .nav-list .nav-item .nav-link:hover {
           color: black;
           background: rgba(255, 255, 255, 0.3); }
+        #landing .main-nav .nav-list .nav-item .resize nav .nav-item .nav-link:hover {
+          background: none; }
   #landing .grid-home {
     display: grid;
     align-items: center;
@@ -203,6 +205,18 @@ body {
     margin-bottom: 0; }
     #contact .contact-grid form {
       padding: 2em; }
+      #contact .contact-grid form .btn {
+        width: 100%;
+        border: none;
+        background: #333333;
+        padding: 0.5em;
+        display: block;
+        font-size: 1em;
+        color: #fff;
+        transition: all 0.3s; }
+        #contact .contact-grid form .btn:hover {
+          background: #666666;
+          cursor: pointer; }
       #contact .contact-grid form label {
         display: block;
         font-weight: 900;
@@ -238,9 +252,9 @@ footer {
   position: fixed;
   background: #fff;
   min-width: 100%;
-  min-height: 50px;
-  box-shadow: 0 5px rgba(0, 0, 0, 0.2); }
-  .resize nav .nav-item {
-    padding: 0px; }
-    .resize nav .nav-item .nav-link a {
-      color: orange; }
+  min-height: 120px; }
+
+@media screen and (min-width: 769px) and (max-width: 1170px) {
+  .photo-body-grid {
+    display: grid;
+    grid-template-columns: 1fr; } }
