@@ -397,17 +397,159 @@ footer {
 //Media Query Mixins
 
 @media screen and (max-width: 500px) {
+  /*WEB DEVELOPMENT*/
+  #web-development {
+    min-height: 950px;
+  }
+
+  #web-development .web-development-body .web-dev-grid .box {
+    max-width: 300px;
+    max-height: 300px;
+  }
+  #web-development .web-development-body .web-dev-grid .box .box-header img {
+    max-width: 300px;
+    max-height: 300px;
+  }
+
+  #web-development .web-development-body .web-dev-grid .box .img-caption p {
+    padding-left: 3.5px;
+    text-align: center;
+  }
+
+  #web-development .web-development-body {
+    width: 100%;
+    margin: 0;
+  }
+  /*END WEB DEVELOPMENT*/
+  /*PHOTOGRAPHY*/
+  #photography .photo-body {
+    width: 100%;
+  }
+  /*END PHOTOGRAPHY*/
+  /*LANDING*/
+  #landing .grid-home .grid-wrapper h1,
+  #landing .grid-home .grid-wrapper p {
+    color: #000;
+    text-align: center;
+    padding: 0 0.7em 0 0.7em;
+    font-size: 1.1em;
+  }
+  #landing#landing {
+    background: url('../img/bay.jpg') -450px 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+  }
+  /*END LANDING*/
 }
 
-@media screen and (max-width: 768px) {
-}
+@media only screen and (max-width: 768px) {
+  /*PHOTOGRAPHY*/
+  #photography .photo-body .photo-body-grid .box {
+    margin: 30px auto 30px auto;
+    width: 250px;
+    height: 200px;
+  }
 
-@media screen and (min-width: 769px) and (max-width: 1170px) {
-  .photo-body-grid {
+  #photography .photo-body .photo-body-grid .box .box-header img {
+    width: 250px;
+    height: 200px;
+  }
+
+  #photography .photo-body .photo-body-grid {
     display: grid;
     grid-template-columns: 1fr;
   }
+  /*END PHOTOGRAPHY*/
+
+  /*ABOUT SECTION*/
+
+  #about#about {
+    background: url('../img/headshot.jpg') 0 0px;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  /*END ABOUT SECTION*/
+
+  /*WEB DEVELOPMENT*/
+  #web-development .web-development-body .web-dev-grid .box {
+    width: 400px;
+    height: 200px;
+  }
+  #web-development .web-development-body .web-dev-grid .box .box-header img {
+    width: 400px;
+    height: 200px;
+  }
+  /*END WEB DEVELOPMENT*/
+  /*LANDING*/
+  #landing .grid-home .grid-wrapper h1,
+  #landing .grid-home .grid-wrapper p {
+    color: #000;
+    text-align: center;
+    padding: 0 0.5em 0 0.5em;
+  }
+  /*END LANDING*/
 }
 
-@media screen and (min-width: 1171px) {
+@media only screen and (min-width: 769px) and (max-width: 1170px) {
+  /*LANDING*/
+  #landing .grid-home .grid-wrapper h1,
+  #landing .grid-home .grid-wrapper p {
+    color: #000;
+    text-align: center;
+  }
+  /*END LANDING*/
+  /*PHOTOGRAPHY SECTION*/
+  #photography .photo-body .photo-body-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  #photography .photo-body .photo-body-grid .box img {
+    width: 450px;
+    height: 400px;
+  }
+
+  #photography .photo-body .photo-body-grid .box .box-img-caption {
+    width: 450px;
+  }
+
+  #photography .photo-body .photo-body-grid .box {
+    margin-bottom: 150px;
+    margin-left: 70px;
+  }
+
+  /*END PHOTOGRAPHY SECTION*/
+  /*ABOUT SECTION*/
+  #about#about {
+    background: url('../img/headshot.jpg') 0 -100px;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  /*END ABOUT SECTION*/
+  /*WEB DEVELOPMENT*/
+  #web-development .web-development-body .web-dev-grid .box {
+    width: 500px;
+    height: 300px;
+  }
+  #web-development .web-development-body .web-dev-grid .box .box-header img {
+    width: 500px;
+    height: 300px;
+  }
+
+  /*END WEB DEVELOPMENT*/
+}
+
+@media screen and (max-width: 1171px) {
+  /*WEB DEVELOPMENT */
+  #web-development .web-development-body .web-dev-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  #web-development .web-development-body .web-dev-grid .box {
+    margin: 0 auto 70px auto;
+  }
+  /*END WEB DEVELOPMENT*/
 }
