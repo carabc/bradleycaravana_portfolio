@@ -57,24 +57,14 @@ body {
     grid-auto-rows: 80vh;
     z-index: 1000; }
     #landing .grid-home .grid-wrapper {
-      color: #000; }
+      color: #fff; }
       #landing .grid-home .grid-wrapper h1 {
         font-size: 2.5em;
         letter-spacing: 5px;
-        line-height: 1; }
+        line-height: 0.3; }
       #landing .grid-home .grid-wrapper p {
         font-size: 1.5em;
         letter-spacing: 3px; }
-
-#about::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 1;
-  background: rgba(0, 0, 0, 0.6); }
 
 #about > * {
   z-index: 100; }
@@ -88,17 +78,14 @@ body {
   display: grid;
   justify-content: center;
   align-items: center;
-  color: #fff;
-  position: relative; }
-  #about#about {
-    background: url("../img/headshot.jpg") 0 -300px;
-    background-size: cover;
-    background-repeat: no-repeat; }
+  position: relative;
+  background: #333333; }
   #about-me-container {
     opacity: 100%;
     position: relative; }
     #about-me-container h1 {
-      font-size: 2em; }
+      line-height: 1.2;
+      letter-spacing: 3px; }
 
 #photography {
   padding: 2em;
@@ -255,6 +242,20 @@ footer {
   min-height: 120px; }
 
 @media screen and (max-width: 500px) {
+  /*LANDING*/
+  #landing .grid-home .grid-wrapper .main {
+    font-size: 0.9em;
+    padding: 0 40px 0 40px; }
+  #landing .grid-home .grid-wrapper .main-sub {
+    font-size: 0.9em;
+    padding: 0 40px 0 40px; }
+  #landing#landing {
+    background: url("../img/bay.jpg") -200px 0px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed; }
+  /*END LANDING*/
+  /*END LANDING*/
   /*WEB DEVELOPMENT*/
   #web-development {
     min-height: 950px; }
@@ -274,22 +275,17 @@ footer {
   /*PHOTOGRAPHY*/
   #photography .photo-body {
     width: 100%; }
-  /*END PHOTOGRAPHY*/
-  /*LANDING*/
-  #landing .grid-home .grid-wrapper h1,
-  #landing .grid-home .grid-wrapper p {
-    color: #000;
-    text-align: center;
-    padding: 0 0.7em 0 0.7em;
-    font-size: 1.1em; }
-  #landing#landing {
-    background: url("../img/bay.jpg") -450px 0;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed; }
-  /*END LANDING*/ }
+  /*END PHOTOGRAPHY*/ }
 
 @media only screen and (max-width: 768px) {
+  /*NAV*/
+  #landing .main-nav {
+    display: none; }
+  /*END NAV*/
+  /*LANDING*/
+  #landing .grid-home .grid-wrapper .main {
+    line-height: 1.6; }
+  /*END LANDING*/
   /*PHOTOGRAPHY*/
   #photography .photo-body .photo-body-grid .box {
     margin: 30px auto 30px auto;
@@ -303,10 +299,6 @@ footer {
     grid-template-columns: 1fr; }
   /*END PHOTOGRAPHY*/
   /*ABOUT SECTION*/
-  #about#about {
-    background: url("../img/headshot.jpg") 0 0px;
-    background-size: cover;
-    background-repeat: no-repeat; }
   /*END ABOUT SECTION*/
   /*WEB DEVELOPMENT*/
   #web-development .web-development-body .web-dev-grid .box {
@@ -345,10 +337,6 @@ footer {
     margin-left: 70px; }
   /*END PHOTOGRAPHY SECTION*/
   /*ABOUT SECTION*/
-  #about#about {
-    background: url("../img/headshot.jpg") 0 -100px;
-    background-size: cover;
-    background-repeat: no-repeat; }
   /*END ABOUT SECTION*/
   /*WEB DEVELOPMENT*/
   #web-development .web-development-body .web-dev-grid .box {
@@ -366,4 +354,15 @@ footer {
     grid-template-columns: 1fr; }
   #web-development .web-development-body .web-dev-grid .box {
     margin: 0 auto 70px auto; }
-  /*END WEB DEVELOPMENT*/ }
+  /*END WEB DEVELOPMENT*/
+  /*LANDING*/
+  #landing .grid-home .grid-wrapper h1 {
+    font-size: 2.5em;
+    color: #fff;
+    letter-spacing: 5px;
+    line-height: 0.3; }
+  #landing .grid-home .grid-wrapper p {
+    font-size: 1.5em;
+    letter-spacing: 3px;
+    color: #fff; }
+  /*END LANDING*/ }

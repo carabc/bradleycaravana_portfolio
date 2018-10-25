@@ -1,5 +1,3 @@
-@import 'mobile';
-
 //VARIABLES AND MIXINS
 $primary-color: #fff;
 $secondary-color: #000;
@@ -12,6 +10,7 @@ $opacity: 0.6;
       background: url('../img/bay.jpg');
       background-size: cover;
       background-repeat: no-repeat;
+      //PUT BACKGROUND ATTATCHMENT FIXED TO RESOLVE THE SCROLL STUTTER ISSUEs
       background-attachment: fixed;
     }
   }
@@ -108,12 +107,12 @@ body {
     z-index: 1000;
 
     .grid-wrapper {
-      color: $secondary-color;
+      color: $primary-color;
 
       h1 {
         font-size: 2.5em;
         letter-spacing: 5px;
-        line-height: 1;
+        line-height: 0.3;
       }
 
       p {
@@ -126,23 +125,22 @@ body {
 //END LANDING HOME PAGE
 
 //ABOUT ME
-#about::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 1;
-  background: rgba($color: $secondary-color, $alpha: $opacity);
-}
+// #about::after {
+//   content: '';
+//   position: absolute;
+//   top: 0;
+//   right: 0;
+//   width: 100%;
+//   height: 100%;
+//   z-index: 1;
+//   background: rgba($color: $secondary-color, $alpha: $opacity);
+// }
 
 #about > * {
   z-index: 100;
 }
 
 #about {
-  @include background2;
   border-top: 2px solid $primary-color;
   padding: 3em;
   text-align: center;
@@ -151,15 +149,16 @@ body {
   display: grid;
   justify-content: center;
   align-items: center;
-  color: $primary-color;
   position: relative;
+  background: lighten($color: $secondary-color, $amount: 20);
 
   &-me-container {
     opacity: 100%;
     position: relative;
 
     h1 {
-      font-size: 2em;
+      line-height: 1.2;
+      letter-spacing: 3px;
     }
   }
 }
@@ -397,6 +396,24 @@ footer {
 //Media Query Mixins
 
 @media screen and (max-width: 500px) {
+  /*LANDING*/
+  #landing .grid-home .grid-wrapper .main {
+    font-size: 0.9em;
+    padding: 0 40px 0 40px;
+  }
+  #landing .grid-home .grid-wrapper .main-sub {
+    font-size: 0.9em;
+    padding: 0 40px 0 40px;
+  }
+  #landing#landing {
+    background: url('../img/bay.jpg') -200px 0px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+  }
+  /*END LANDING*/
+
+  /*END LANDING*/
   /*WEB DEVELOPMENT*/
   #web-development {
     min-height: 950px;
@@ -426,24 +443,19 @@ footer {
     width: 100%;
   }
   /*END PHOTOGRAPHY*/
-  /*LANDING*/
-  #landing .grid-home .grid-wrapper h1,
-  #landing .grid-home .grid-wrapper p {
-    color: #000;
-    text-align: center;
-    padding: 0 0.7em 0 0.7em;
-    font-size: 1.1em;
-  }
-  #landing#landing {
-    background: url('../img/bay.jpg') -450px 0;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-  }
-  /*END LANDING*/
 }
 
 @media only screen and (max-width: 768px) {
+  /*NAV*/
+  #landing .main-nav {
+    display: none;
+  }
+  /*END NAV*/
+  /*LANDING*/
+  #landing .grid-home .grid-wrapper .main {
+    line-height: 1.6;
+  }
+  /*END LANDING*/
   /*PHOTOGRAPHY*/
   #photography .photo-body .photo-body-grid .box {
     margin: 30px auto 30px auto;
@@ -463,12 +475,6 @@ footer {
   /*END PHOTOGRAPHY*/
 
   /*ABOUT SECTION*/
-
-  #about#about {
-    background: url('../img/headshot.jpg') 0 0px;
-    background-size: cover;
-    background-repeat: no-repeat;
-  }
 
   /*END ABOUT SECTION*/
 
@@ -522,11 +528,7 @@ footer {
 
   /*END PHOTOGRAPHY SECTION*/
   /*ABOUT SECTION*/
-  #about#about {
-    background: url('../img/headshot.jpg') 0 -100px;
-    background-size: cover;
-    background-repeat: no-repeat;
-  }
+
   /*END ABOUT SECTION*/
   /*WEB DEVELOPMENT*/
   #web-development .web-development-body .web-dev-grid .box {
@@ -552,4 +554,17 @@ footer {
     margin: 0 auto 70px auto;
   }
   /*END WEB DEVELOPMENT*/
+  /*LANDING*/
+  #landing .grid-home .grid-wrapper h1 {
+    font-size: 2.5em;
+    color: #fff;
+    letter-spacing: 5px;
+    line-height: 0.3;
+  }
+  #landing .grid-home .grid-wrapper p {
+    font-size: 1.5em;
+    letter-spacing: 3px;
+    color: #fff;
+  }
+  /*END LANDING*/
 }
