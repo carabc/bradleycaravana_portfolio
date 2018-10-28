@@ -16,10 +16,20 @@
 <body>
   <!--LANDING SECTION-->
   <section id="landing">
-    <nav class="main-nav">
+    <!--RESPONSIVE NAV-->
+    <div class="responsive-nav">
       <div class="burger">
-
+        <i class="fas fa-bars"></i>
       </div>
+      <ul class="responsive-ul">
+        <li class="responsive-item"><a class="responsive-nav-link" href="">About</a></li>
+        <li class="responsive-item"><a class="responsive-nav-link" href="">Photography</a></li>
+        <li class="responsive-item"><a class="responsive-nav-link" href="">Web Development</a></li>
+        <li class="responsive-item"><a class="responsive-nav-link" href="">Contact</a></li>
+      </ul>
+    </div>
+    <!--END RESPONSIVE NAV-->
+    <nav class="main-nav">
       <ul class="nav-list">
         <li class="logo nav-item"> <a href="#landing" class="nav-link">Bradley Caravana |</a></li>
         <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
@@ -40,7 +50,7 @@
   <!--ABOUT ME-->
   <section id="about">
     <div class="about-me-container">
-      <h1>About Me ...|</h1>
+      <h1 class="about-header">About Me ...|</h1>
       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit rerum facere quis dolor soluta, ex odio
         provident
         iure illo commodi aliquam voluptate debitis earum temporibus fugiat necessitatibus minima deserunt rem
@@ -68,26 +78,54 @@
         <div class="photo-body-grid">
           <div class="box">
             <div class="box-header">
-              <img src="img/bay.jpg" alt="Babylon Docks, Long Island New York." height="300px" width="300px">
+              <img class="img0" src="img/bay.jpg" alt="Babylon Docks, Long Island New York." height="300px" width="300px">
             </div>
             <div class="box-img-caption">
               <p>Babylon Docks</p>
             </div>
+            <div class="modal0">
+              <span class="close0">&times;</span>
+              <div class="modal-content0">
+                <div class="modal-img-container0">
+                  <img src="img/bay.jpg" alt="">
+                </div>
+                <p>Babylon Docks: Long Island, New York.</p>
+              </div>
+            </div>
           </div>
           <div class="box">
             <div class="box-header">
-              <img src="img/great stars.jpg" alt="Babylon Docks, Long Island New York." height="300px" width="300px">
+              <img class="img1" src="img/great stars.jpg" alt="Babylon Docks, Long Island New York." height="300px"
+                width="300px">
             </div>
             <div class="box-img-caption">
               <p>Montauk Night Sky</p>
             </div>
+            <div class="modal1">
+              <span class="close1">&times;</span>
+              <div class="modal-content1">
+                <div class="modal-img-container1">
+                  <img src="img/great stars.jpg" alt="">
+                </div>
+                <p>Montauk Night Sky: Montauk, New York.</p>
+              </div>
+            </div>
           </div>
           <div class="box">
             <div class="box-header">
-              <img src="img/trails.jpg" alt="Babylon Docks, Long Island New York." height="300px" width="300px">
+              <img class="img2" src="img/trails.jpg" alt="Babylon Docks, Long Island New York." height="300px" width="300px">
             </div>
             <div class="box-img-caption">
               <p>Montauk Star Trails</p>
+            </div>
+            <div class="modal2">
+              <span class="close2">&times;</span>
+              <div class="modal-content2">
+                <div class="modal-img-container2">
+                  <img src="img/trails.jpg" alt="">
+                </div>
+                <p>Montauk Star Trails: Montauk, New York.</p>
+              </div>
             </div>
           </div>
         </div>
@@ -105,18 +143,36 @@
       <div class="web-dev-grid">
         <div class="box">
           <div class="box-header">
-            <img src="img/site1.jpg" alt="SkyNet | Cloud Storage" width="700px" height="400px">
+            <img class="img3" src="img/site1.jpg" alt="SkyNet | Cloud Storage" width="700px" height="400px">
           </div>
           <div class="img-caption">
             <p>SkyNet | A cloud storage alternative.</p>
           </div>
+          <div class="modal3">
+            <span class="close3">&times;</span>
+            <div class="modal-content3">
+              <div class="modal-img-container3">
+                <img src="img/site1.jpg" alt="">
+              </div>
+              <p>SkyNet | A cloud storage alternative.</p>
+            </div>
+          </div>
         </div>
         <div class="box">
           <div class="box-header">
-            <img src="img/site2.png" alt="Modern Portfolio | Work" width="700px" height="400px">
+            <img class="img4" src="img/site2.png" alt="Modern Portfolio | Work" width="700px" height="400px">
           </div>
           <div class="img-caption">
             <p>Modern Portfolio | A digital briefcase of my work.</p>
+          </div>
+          <div class="modal4">
+            <span class="close4">&times;</span>
+            <div class="modal-content4">
+              <div class="modal-img-container4">
+                <img src="img/site2.png" alt="">
+              </div>
+              <p>Modern Portfolio | A digital briefcase of my work.</p>
+            </div>
           </div>
         </div>
       </div>
