@@ -3,12 +3,15 @@
   "version": "1.0.0",
   "description": "Clean/Professional Web Development Portfolio Theme",
   "main": "index.js",
+  "homepage": "https://carabc.github.io/bradleycaravana_portfolio",
   "dependencies": {
+    "gh-pages": "^2.0.1",
     "node-sass": "^4.9.4"
   },
   "devDependencies": {},
   "scripts": {
-    "sass": "node-sass -w sass/ -o dist/style --recursive"
+    "sass": "node-sass -w sass/ -o dist/style --recursive",
+    "deploy": "gh-pages -d dist"
   },
   "author": "CARABC",
   "license": "ISC"
