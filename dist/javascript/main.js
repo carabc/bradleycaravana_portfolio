@@ -1,39 +1,66 @@
-////SMOOTH SCROLL
-// console.log('working');
+//FIREBASE AND CONTACT FORM
 
-// function smoothScroll(target, duration) {
-//   var target = document.querySelector(target);
-//   var targetPosition = target.getBoundingClientRect();
-//   var startPosition = window.pageYOffset;
-//   var distance = targetPosition - startPosition;
-//   var startTime = null;
+// Initialize Firebase
+var config = {
+  apiKey: 'AIzaSyCF84soyjXa4GiGil_czZkkBqpv8AtWeEY',
+  authDomain: 'bradleycaravana-contact-form.firebaseapp.com',
+  databaseURL: 'https://bradleycaravana-contact-form.firebaseio.com',
+  projectId: 'bradleycaravana-contact-form',
+  storageBucket: 'bradleycaravana-contact-form.appspot.com',
+  messagingSenderId: '141626521295'
+};
+firebase.initializeApp(config);
 
-//   function animation(currentTime) {
-//     if (startTime == null) startTime = currentTime;
-//     var timeElapsed = currentTime - startTime;
-//     var run = ease(timeElapsed, startPosition, distance, duration);
-//     window.scrollTo(0, run);
-//     if (timeElapsed < duration) requestAnimationFrame(animation);
-//   }
+//Reference messages collection
+var messagesRef = firebase.database().ref('messages');
 
-//   function ease(t, b, c, d) {
-//     t /= d / 2;
-//     if (t < 1) return (c / 2) * t * t + b;
-//     t--;
-//     return (-c / 2) * (t * (t - 2) - 1) + b;
-//   }
+//Listen for form submit
+document.getElementById('contactForm').addEventListener('submit', submitForm);
 
-//   requestAnimationFrame(animation);
-// }
+//Submit form
+function submitForm(e) {
+  e.preventDefault();
 
-// var link = document.querySelector('.nav-link');
-// var about = document.getElementById('about');
-// link.addEventListener('click', function() {
-//   smoothScroll('about', 1000);
-// });
-////END SMOOTH SCROLL
+  //Get all the values
+  var firstName = getInputVal('firstName');
+  var lastName = getInputVal('lastName');
+  var email = getInputVal('email');
+  var message = getInputVal('message');
 
-////STICKY NAV
+  //Save message
+  saveMessage(firstName, lastName, email, message);
+
+  //Show alert
+  document.querySelector('.alert').style.display = 'block';
+
+  //Hide alert after 5 seconds
+  setTimeout(function() {
+    document.querySelector('.alert').style.display = 'none';
+  }, 5000);
+
+  //Clear Form
+  document.getElementById('contactForm').reset();
+}
+
+//Function to get form values
+function getInputVal(id) {
+  return document.getElementById(id).value;
+}
+
+//Save message to firebase
+function saveMessage(firstName, lastName, email, message) {
+  var newMessageRef = messagesRef.push();
+  newMessageRef.set({
+    firstName: firstName,
+    lastName: lastName,
+    email: email,
+    message: message
+  });
+}
+
+//END FIREBASE AND CONTACT FORM
+
+//STICKY NAV
 const navBar = document.querySelector('.main-nav');
 const navHeight = navBar.offsetTop;
 const landingContent = document.querySelector('.grid-home');
@@ -52,9 +79,9 @@ function navResize() {
     document.body.classList.remove('resize');
   }
 }
-////END STICKY NAV
+//END STICKY NAV
 
-////RESPONSIVE NAV
+//RESPONSIVE NAV
 const burger = document.querySelector('.burger');
 const ul = document.querySelector('.responsive-ul');
 let showMenu = false;
@@ -175,4 +202,4 @@ function closeModal4() {
     showModal = false;
   }
 }
-////END MODAL IMAGE
+//END MODAL IMAGE

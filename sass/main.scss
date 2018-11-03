@@ -374,6 +374,15 @@ body {
     }
   }
 
+  .alert {
+    text-align: center;
+    padding: 10px;
+    background: #79c879;
+    color: $primary-color;
+    display: none;
+    @include animationEase();
+  }
+
   .contact-grid {
     text-align: center;
     margin-bottom: 0;
@@ -473,8 +482,8 @@ footer {
 
 .close0 {
   position: absolute;
-  top: 30px;
-  right: 400px;
+  top: 0.3%;
+  right: 26%;
   color: #fff;
   font-size: 4em;
   cursor: pointer;
@@ -484,12 +493,12 @@ footer {
   width: 70%;
   margin: auto;
   overflow: hidden;
+  margin-top: 4%;
 }
 
 .modal-content0 img {
-  width: 1000px;
-  height: 600px;
-  margin-top: 10%;
+  width: 70%;
+  height: 70%;
 }
 
 .modal0 p {
@@ -498,7 +507,7 @@ footer {
   letter-spacing: 3px;
   background: #000;
   text-align: center;
-  width: 500px;
+  width: 70%;
   margin: 10px auto;
   padding: 0.5em;
 }
@@ -522,8 +531,8 @@ footer {
 
 .close1 {
   position: absolute;
-  top: 30px;
-  right: 400px;
+  top: 0.3%;
+  right: 26%;
   color: #fff;
   font-size: 4em;
   cursor: pointer;
@@ -533,12 +542,12 @@ footer {
   width: 70%;
   margin: auto;
   overflow: hidden;
+  margin-top: 4%;
 }
 
 .modal-content1 img {
-  width: 1000px;
-  height: 600px;
-  margin-top: 10%;
+  width: 70%;
+  height: 70%;
 }
 
 .modal1 p {
@@ -547,7 +556,7 @@ footer {
   letter-spacing: 3px;
   background: #000;
   text-align: center;
-  width: 500px;
+  width: 70%;
   margin: 10px auto;
   padding: 0.5em;
 }
@@ -565,8 +574,8 @@ footer {
 
 .close2 {
   position: absolute;
-  top: 30px;
-  right: 400px;
+  top: 0.3%;
+  right: 26%;
   color: #fff;
   font-size: 4em;
   cursor: pointer;
@@ -576,13 +585,19 @@ footer {
   width: 70%;
   margin: auto;
   overflow: hidden;
+  margin-top: 4%;
 }
 
 .modal-content2 img {
-  width: 1000px;
-  height: 600px;
-  margin-top: 10%;
+  width: 70%;
+  height: 70%;
 }
+
+// div[class^='modal'] p {
+//   background: $primary-color;
+//   color: $secondary-color;
+//   font-weight: 600;
+// }
 
 .modal2 p {
   font-size: 1.2em;
@@ -590,7 +605,7 @@ footer {
   letter-spacing: 3px;
   background: #000;
   text-align: center;
-  width: 500px;
+  width: 70%;
   margin: 10px auto;
   padding: 0.5em;
 }
@@ -625,9 +640,9 @@ footer {
 .modal-content3 img {
   width: 100%;
   height: 100%;
-  margin-top: 10%;
   margin-left: auto;
   margin-right: auto;
+  margin-top: 10%;
 }
 
 .modal3 p {
@@ -671,7 +686,9 @@ footer {
 .modal-content4 img {
   width: 100%;
   height: 100%;
-  margin: 10% auto 0 auto;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10%;
 }
 
 .modal4 p {
@@ -689,19 +706,104 @@ footer {
 
 //Media Queries
 @media screen and (max-width: 500px) {
-  //MODALS
+  //MODALS IN PHOTOGRAPHY
+  #photography
+    .photo-body
+    .photo-body-grid
+    .box
+    .modal0
+    .modal-content0
+    .modal-img-container0,
+  #photography
+    .photo-body
+    .photo-body-grid
+    .box
+    .modal1
+    .modal-content1
+    .modal-img-container1,
+  #photography
+    .photo-body
+    .photo-body-grid
+    .box
+    .modal2
+    .modal-content2
+    .modal-img-container2 {
+    width: 100%;
+    margin: 0;
+  }
+  #photography
+    .photo-body
+    .photo-body-grid
+    .box
+    .modal0
+    .modal-content0
+    .modal-img-container0
+    img,
+  #photography
+    .photo-body
+    .photo-body-grid
+    .box
+    .modal1
+    .modal-content1
+    .modal-img-container1
+    img,
+  #photography
+    .photo-body
+    .photo-body-grid
+    .box
+    .modal2
+    .modal-content2
+    .modal-img-container2
+    img {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+  }
+  #photography .photo-body .photo-body-grid .box .modal0 .modal-content0 p,
+  #photography .photo-body .photo-body-grid .box .modal1 .modal-content1 p,
+  #photography .photo-body .photo-body-grid .box .modal2 .modal-content2 p {
+    width: 100%;
+    font-size: 1em;
+  }
+  #photography .photo-body .photo-body-grid .box .modal0 .modal-content0,
+  #photography .photo-body .photo-body-grid .box .modal1 .modal-content1,
+  #photography .photo-body .photo-body-grid .box .modal2 .modal-content2 {
+    width: 100%;
+    height: 100%;
+  }
+  #photography
+    .photo-container
+    .photo-body
+    .photo-body-grid
+    .box
+    .modal0
+    .close0,
+  #photography
+    .photo-container
+    .photo-body
+    .photo-body-grid
+    .box
+    .modal1
+    .close1,
+  #photography
+    .photo-container
+    .photo-body
+    .photo-body-grid
+    .box
+    .modal2
+    .close2 {
+    right: 2%;
+    top: 11%;
+  }
+  //END MODALS IN PHOTOGRAPHY
+  //MODALS IN WEB DEVELOPMENT
   .web-development-body
     .web-dev-grid
     .box
     .modal3
     .modal-content3
     .modal-img-container3
-    img {
-    width: 100%;
-    height: 30%;
-    margin-left: 0;
-    margin-top: 15em;
-  }
+    img,
   .web-development-body
     .web-dev-grid
     .box
@@ -711,20 +813,19 @@ footer {
     img {
     width: 100%;
     height: 30%;
+    margin-left: 0;
+    margin-top: 15em;
   }
 
-  .web-development-body .web-dev-grid .box .modal3 .modal-content3 {
-    width: 100%;
-  }
-
+  .web-development-body .web-dev-grid .box .modal3 .modal-content3,
   .web-development-body .web-dev-grid .box .modal4 .modal-content4 {
     width: 100%;
   }
 
-  .web-development-body .web-dev-grid .box .modal3 .close3,
-  .web-development-body .web-dev-grid .box .modal4 .close4 {
-    top: 20px;
-    right: 0;
+  #web-development .web-development-body .web-dev-grid .box .modal3 .close3,
+  #web-development .web-development-body .web-dev-grid .box .modal4 .close4 {
+    top: 25%;
+    right: 1%;
   }
 
   .web-development-body .web-dev-grid .box .modal3 .modal-content3 p,
@@ -732,7 +833,7 @@ footer {
     width: 100%;
     font-size: 1em;
   }
-  //END MODALS
+  //END MODALS IN WEB DEVELOPMENT
 
   /*LANDING*/
   #landing .grid-home .grid-wrapper .main {
@@ -784,7 +885,96 @@ footer {
 }
 
 @media only screen and (max-width: 768px) {
-  //MODALS
+  //MODALS IN PHOTOGRAPHY
+  #photography
+    .photo-body
+    .photo-body-grid
+    .box
+    .modal0
+    .modal-content0
+    .modal-img-container0,
+  #photography
+    .photo-body
+    .photo-body-grid
+    .box
+    .modal1
+    .modal-content1
+    .modal-img-container1,
+  #photography
+    .photo-body
+    .photo-body-grid
+    .box
+    .modal2
+    .modal-content2
+    .modal-img-container2 {
+    width: 100%;
+    margin: 0;
+  }
+  #photography
+    .photo-body
+    .photo-body-grid
+    .box
+    .modal0
+    .modal-content0
+    .modal-img-container0
+    img,
+  #photography
+    .photo-body
+    .photo-body-grid
+    .box
+    .modal1
+    .modal-content1
+    .modal-img-container1
+    img,
+  #photography
+    .photo-body
+    .photo-body-grid
+    .box
+    .modal2
+    .modal-content2
+    .modal-img-container2
+    img {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+  }
+  #photography .photo-body .photo-body-grid .box .modal0 .modal-content0 p,
+  #photography .photo-body .photo-body-grid .box .modal1 .modal-content1 p,
+  #photography .photo-body .photo-body-grid .box .modal2 .modal-content2 p {
+    width: 100%;
+    font-size: 1em;
+  }
+  #photography
+    .photo-body
+    .photo-body-grid
+    .box
+    .modal0
+    .modal-content0
+    .modal-img-container0,
+  #photography
+    .photo-body
+    .photo-body-grid
+    .box
+    .modal1
+    .modal-content1
+    .modal-img-container1,
+  #photography
+    .photo-body
+    .photo-body-grid
+    .box
+    .modal2
+    .modal-content2
+    .modal-img-container2 {
+    margin-top: 35%;
+  }
+  #photography .photo-body .photo-body-grid .box .modal0 .close0,
+  #photography .photo-body .photo-body-grid .box .modal1 .close1,
+  #photography .photo-body .photo-body-grid .box .modal2 .close2 {
+    right: 15%;
+    top: 15%;
+  }
+  //END MODALS IN PHOTOGRAPHY
+  //MODALS IN WEB DEVELOPMENT
   .web-development-body .web-dev-grid .box .modal3 .modal-content3 img,
   .web-development-body .web-dev-grid .box .modal4 .modal-content4 img {
     width: 100%;
@@ -801,7 +991,7 @@ footer {
     right: 1%;
     top: 5%;
   }
-  //END MODALS
+  //MODALS IN WEB DEVELOPMENT
   /*NAV*/
   #landing .responsive-nav {
     display: block;
@@ -859,49 +1049,118 @@ footer {
 }
 
 @media only screen and (min-width: 769px) and (max-width: 1170px) {
-  //MODALS IN WEB DEVELOPMENT
-  .web-development-body
-    .web-dev-grid
+  //MODALS IN PHOTOGRAPHY
+  #photography
+    .photo-body
+    .photo-body-grid
     .box
-    .modal3
-    .modal-content3
-    .modal-img-container3,
-  .web-development-body
-    .web-dev-grid
+    .modal0
+    .modal-content0
+    .modal-img-container0,
+  #photography
+    .photo-body
+    .photo-body-grid
     .box
-    .modal4
-    .modal-content4
-    .modal-img-container4
-    img,
-  .photo-body
+    .modal1
+    .modal-content1
+    .modal-img-container1,
+  #photography
+    .photo-body
+    .photo-body-grid
+    .box
+    .modal2
+    .modal-content2
+    .modal-img-container2 {
+    width: 100%;
+    margin: 0;
+  }
+  #photography
+    .photo-body
     .photo-body-grid
     .box
     .modal0
     .modal-content0
     .modal-img-container0
+    img,
+  #photography
+    .photo-body
+    .photo-body-grid
+    .box
+    .modal1
+    .modal-content1
+    .modal-img-container1
+    img,
+  #photography
+    .photo-body
+    .photo-body-grid
+    .box
+    .modal2
+    .modal-content2
+    .modal-img-container2
     img {
     width: 100%;
-    height: 30%;
-    margin: 0;
+    height: 100%;
   }
-
-  .web-development-body
+  #photography .photo-body .photo-body-grid .box .modal0 .modal-content0 p,
+  #photography .photo-body .photo-body-grid .box .modal1 .modal-content1 p,
+  #photography .photo-body .photo-body-grid .box .modal2 .modal-content2 p {
+    width: 100%;
+  }
+  #photography
+    .photo-body
+    .photo-body-grid
+    .box
+    .modal0
+    .modal-content0
+    .modal-img-container0,
+  #photography
+    .photo-body
+    .photo-body-grid
+    .box
+    .modal1
+    .modal-content1
+    .modal-img-container1,
+  #photography
+    .photo-body
+    .photo-body-grid
+    .box
+    .modal2
+    .modal-content2
+    .modal-img-container2 {
+    margin-top: 12%;
+  }
+  #photography .photo-body .photo-body-grid .box .modal0 .close0,
+  #photography .photo-body .photo-body-grid .box .modal1 .close1,
+  #photography .photo-body .photo-body-grid .box .modal2 .close2 {
+    right: 15%;
+    top: 7%;
+  }
+  //MODALS IN WEB DEVELOPMENT
+  #web-development
+    .web-development-body
     .web-dev-grid
     .box
     .modal3
     .modal-content3
-    .modal-img-container3,
-  .web-dev-grid .box .modal4 .modal-content4 .modal-img-container4,
-  .photo-body .photo-body-grid .box .modal0 .modal-content0,
-  .modal-img-container0 {
-    margin-top: 10%;
+    .modal-img-container3
+    img,
+  #web-development
+    .web-development-body
+    .web-dev-grid
+    .box
+    .modal4
+    .modal-content4
+    .modal-img-container4
+    img {
+    width: 100%;
+    height: 30%;
+    margin-top: 0;
   }
 
   .web-development-body .web-dev-grid .box .modal3 .modal-content3,
-  .web-development-body .web-dev-grid .box .modal4 .modal-content4,
-  .photo-body .photo-body-grid .box .modal0 .modal-content0 {
+  .web-development-body .web-dev-grid .box .modal4 .modal-content4 {
     width: 100%;
-    margin: 0;
+    margin-top: 20%;
   }
 
   .web-development-body .web-dev-grid .box .modal3 .modal-content3 p,
@@ -910,10 +1169,10 @@ footer {
     margin: 0;
   }
 
-  .web-development-body .web-dev-grid .box .modal3 .close3,
-  .web-development-body .web-dev-grid .box .modal4 .close4 {
+  #web-development .web-development-body .web-dev-grid .box .modal3 .close3,
+  #web-development .web-development-body .web-dev-grid .box .modal4 .close4 {
     right: 1%;
-    top: 0;
+    top: 13%;
   }
   //END MODALS IN WEB DEVELOPMENT
 

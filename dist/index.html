@@ -22,10 +22,10 @@
         <i class="fas fa-bars"></i>
       </div>
       <ul class="responsive-ul">
-        <li class="responsive-item"><a class="responsive-nav-link" href="">About</a></li>
-        <li class="responsive-item"><a class="responsive-nav-link" href="">Photography</a></li>
-        <li class="responsive-item"><a class="responsive-nav-link" href="">Web Development</a></li>
-        <li class="responsive-item"><a class="responsive-nav-link" href="">Contact</a></li>
+        <li class="responsive-item"><a class="responsive-nav-link" href="#about">About</a></li>
+        <li class="responsive-item"><a class="responsive-nav-link" href="#photography">Photography</a></li>
+        <li class="responsive-item"><a class="responsive-nav-link" href="#web-development">Web Development</a></li>
+        <li class="responsive-item"><a class="responsive-nav-link" href="#contact">Contact</a></li>
       </ul>
     </div>
     <!--END RESPONSIVE NAV-->
@@ -186,18 +186,19 @@
       <p>Emails are the best way to reach me; I check my inbox everyday.</p>
     </header>
     <div class="container">
+      <div class="alert">Your message has been sent!</div>
       <div class="contact-grid">
         <div class="form">
-          <form action="">
+          <form id="contactForm">
             <label type="text" for="">First Name</Label>
-            <input type="text">
+            <input type="text" name="name" id="firstName" required>
             <label for="">Last Name</label>
-            <input type="text">
+            <input type="text" name="lastName" id="lastName" required>
             <label for="">Email</label>
-            <input type="email">
+            <input type="email" name="email" id="email" required>
             <label for="">Message</label>
-            <textarea></textarea>
-            <button class="btn">Send</button>
+            <textarea name="message" id="message" required></textarea>
+            <button type="submit" class="btn">Send</button>
           </form>
         </div>
       </div>
@@ -213,6 +214,7 @@
   </footer>
   <!--END FOOTER-->
   <!--IMPORT SCRIPTS-->
+  <script src="https://www.gstatic.com/firebasejs/5.5.7/firebase.js"></script>
   <script src="javascript/main.js"></script>
   <!--END IMPORT SCRIPTS-->
 </body>
