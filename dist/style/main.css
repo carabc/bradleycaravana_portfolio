@@ -93,11 +93,14 @@ body {
     grid-auto-rows: 80vh;
     z-index: 1000; }
     #landing .grid-home .grid-wrapper {
-      color: #fff; }
+      color: #fff;
+      text-align: center; }
       #landing .grid-home .grid-wrapper h1 {
         font-size: 2.5em;
         letter-spacing: 5px;
         line-height: 0.3; }
+        #landing .grid-home .grid-wrapper h1 .not-bold {
+          font-weight: normal; }
       #landing .grid-home .grid-wrapper p {
         font-size: 1.5em;
         letter-spacing: 3px; }
@@ -107,7 +110,7 @@ body {
   padding: 3em;
   text-align: center;
   color: #fff;
-  min-height: 400px;
+  height: auto;
   display: grid;
   justify-content: center;
   align-items: center;
@@ -115,11 +118,15 @@ body {
   background: #333333; }
   #about .about-me-container {
     opacity: 100%;
-    position: relative; }
+    position: relative;
+    width: 63%;
+    margin: auto; }
     #about .about-me-container .about-header {
       line-height: 1.2;
       letter-spacing: 3px;
       font-size: 2em; }
+    #about .about-me-container p {
+      margin-bottom: 30px; }
 
 #photography {
   padding: 2em;

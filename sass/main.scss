@@ -159,11 +159,16 @@ body {
 
     .grid-wrapper {
       color: $primary-color;
+      text-align: center;
 
       h1 {
         font-size: 2.5em;
         letter-spacing: 5px;
         line-height: 0.3;
+
+        .not-bold {
+          font-weight: normal;
+        }
       }
 
       p {
@@ -196,7 +201,7 @@ body {
   padding: 3em;
   text-align: center;
   color: $primary-color;
-  min-height: 400px;
+  height: auto;
   display: grid;
   justify-content: center;
   align-items: center;
@@ -206,11 +211,17 @@ body {
   .about-me-container {
     opacity: 100%;
     position: relative;
+    width: 63%;
+    margin: auto;
 
     .about-header {
       line-height: 1.2;
       letter-spacing: 3px;
       font-size: 2em;
+    }
+
+    p {
+      margin-bottom: 30px;
     }
   }
 }
