@@ -126,7 +126,11 @@ body {
       letter-spacing: 3px;
       font-size: 2em; }
     #about .about-me-container p {
-      margin-bottom: 30px; }
+      margin-bottom: 30px;
+      background: #262626;
+      padding: 10px;
+      border-radius: 10px;
+      border: 1px solid #000; }
 
 #photography {
   padding: 2em;
@@ -617,6 +621,9 @@ img {
   .web-development-body .web-dev-grid .box .modal4 .modal-content4 p {
     width: 100%;
     font-size: 1em; }
+  #about .about-me-container {
+    width: 100%;
+    margin: 0; }
   /*LANDING*/
   #landing .grid-home .grid-wrapper .main {
     font-size: 0.9em;

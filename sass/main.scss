@@ -222,6 +222,10 @@ body {
 
     p {
       margin-bottom: 30px;
+      background: lighten($color: $secondary-color, $amount: 15);
+      padding: 10px;
+      border-radius: 10px;
+      border: 1px solid $secondary-color;
     }
   }
 }
@@ -845,7 +849,12 @@ footer {
     font-size: 1em;
   }
   //END MODALS IN WEB DEVELOPMENT
-
+  //ABOUT
+  #about .about-me-container {
+    width: 100%;
+    margin: 0;
+  }
+  //END ABOUT
   /*LANDING*/
   #landing .grid-home .grid-wrapper .main {
     font-size: 0.9em;
