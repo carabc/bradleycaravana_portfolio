@@ -203,18 +203,3 @@ function closeModal4() {
   }
 }
 //END MODAL IMAGE
-
-//PARALLAX
-//Center Showcase Headers/Button Parallax
-
-var landingHeight = document.querySelector('#landing').offsetHeight;
-
-window.addEventListener('scroll', function() {
-  var wScroll = this.pageYOffset;
-  if (wScroll <= landingHeight) {
-    document.querySelector('.grid-wrapper').style.transform =
-      'translate(0px, ' + wScroll / 2 + '%)';
-  }
-});
-
-//END PARALLAX
