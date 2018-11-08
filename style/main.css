@@ -126,11 +126,7 @@ body {
       letter-spacing: 3px;
       font-size: 2em; }
     #about .about-me-container p {
-      margin-bottom: 30px;
-      background: #262626;
-      padding: 10px;
-      border-radius: 10px;
-      border: 1px solid #000; }
+      margin-bottom: 30px; }
 
 #photography {
   padding: 2em;
@@ -275,7 +271,8 @@ body {
         padding: 0.5em;
         font-size: 2em;
         border: none;
-        border-bottom: 1px solid #333333; }
+        border-bottom: 1px solid #333333;
+        border-radius: 0; }
       #contact .contact-grid form textarea {
         width: 100%;
         height: 70px;
