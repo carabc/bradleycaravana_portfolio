@@ -12,8 +12,8 @@ $opacity: 0.6;
       background: url('../img/bay.jpg');
       background-size: cover;
       background-repeat: no-repeat;
-      //PUT BACKGROUND ATTATCHMENT FIXED TO RESOLVE THE SCROLL STUTTER ISSUEs
       background-attachment: fixed;
+      //PUT BACKGROUND ATTATCHMENT FIXED TO RESOLVE THE SCROLL STUTTER ISSUE
     }
   }
 }
@@ -120,6 +120,8 @@ body {
     display: grid;
     align-items: center;
     z-index: 1000;
+    position: fixed;
+    width: 100%;
 
     .nav-list {
       list-style: none;
@@ -154,7 +156,7 @@ body {
     display: grid;
     align-items: center;
     justify-content: center;
-    grid-auto-rows: 80vh;
+    grid-auto-rows: 100vh;
     z-index: 1000;
 
     .grid-wrapper {
@@ -175,27 +177,42 @@ body {
         font-size: 1.5em;
         letter-spacing: 3px;
       }
+
+      p a {
+        color: $primary-color;
+
+        &:hover {
+          color: $secondary-color;
+        }
+      }
+      i {
+        font-size: 2em;
+        position: absolute;
+        bottom: 30px;
+        font-weight: 0;
+        @include animationEase();
+      }
     }
   }
 }
-//END LANDING HOME PAGE
 
-//ABOUT ME
-// #about::after {
+// #landing::after {
 //   content: '';
 //   position: absolute;
 //   top: 0;
 //   right: 0;
 //   width: 100%;
 //   height: 100%;
-//   z-index: 1;
+//   z-index: 0;
 //   background: rgba($color: $secondary-color, $alpha: $opacity);
 // }
 
-// #about > * {
-//   z-index: 100;
+// #landing > * {
+//   z-index: 1000;
 // }
+//END LANDING HOME PAGE
 
+//ABOUT ME
 #about {
   border-top: 2px solid $primary-color;
   padding: 3em;
@@ -222,10 +239,6 @@ body {
 
     p {
       margin-bottom: 30px;
-      background: lighten($color: $secondary-color, $amount: 15);
-      padding: 10px;
-      border-radius: 10px;
-      border: 1px solid $secondary-color;
     }
   }
 }
@@ -435,6 +448,9 @@ body {
         height: 40px;
         padding: 0.5em;
         font-size: 2em;
+        border: none;
+        border-bottom: 1px solid lighten($color: $secondary-color, $amount: 20);
+        border-radius: 0;
       }
 
       textarea {
@@ -850,6 +866,9 @@ footer {
   }
   //END MODALS IN WEB DEVELOPMENT
   //ABOUT
+  #about {
+    padding: 10px;
+  }
   #about .about-me-container {
     width: 100%;
     margin: 0;
@@ -864,14 +883,16 @@ footer {
     font-size: 0.9em;
     padding: 0 40px 0 40px;
   }
+
+  #landing .grid-home .grid-wrapper p a i {
+    font-size: 1.5em;
+  }
   #landing#landing {
     background: url('../img/bay.jpg') -200px 0px;
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
   }
-  /*END LANDING*/
-
   /*END LANDING*/
   /*WEB DEVELOPMENT*/
   #web-development {
@@ -902,6 +923,15 @@ footer {
     width: 100%;
   }
   /*END PHOTOGRAPHY*/
+  //CONTACT
+  #contact .container {
+    width: 100%;
+  }
+
+  #contact .contact-grid form input {
+    font-size: 1.2em;
+  }
+  //END CONTACT
 }
 
 @media only screen and (max-width: 768px) {
