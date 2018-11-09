@@ -70,11 +70,9 @@ window.addEventListener('scroll', navResize);
 
 function navResize() {
   if (window.scrollY > navHeight) {
-    landingContent.style.marginTop = navBar.offsetHeight + 'px';
     navBar.style.minHeight = 50 + 'px';
     document.body.classList.add('resize');
   } else {
-    landingContent.style.marginTop = 0;
     navBar.style.minHeight = 70 + 'px';
     document.body.classList.remove('resize');
   }

@@ -67,7 +67,9 @@ body {
     min-height: 70px;
     display: grid;
     align-items: center;
-    z-index: 1000; }
+    z-index: 1000;
+    position: fixed;
+    width: 100%; }
     #landing .main-nav .nav-list {
       list-style: none;
       padding: 0;
@@ -90,7 +92,7 @@ body {
     display: grid;
     align-items: center;
     justify-content: center;
-    grid-auto-rows: 80vh;
+    grid-auto-rows: 100vh;
     z-index: 1000; }
     #landing .grid-home .grid-wrapper {
       color: #fff;
@@ -104,6 +106,16 @@ body {
       #landing .grid-home .grid-wrapper p {
         font-size: 1.5em;
         letter-spacing: 3px; }
+      #landing .grid-home .grid-wrapper p a {
+        color: #fff; }
+        #landing .grid-home .grid-wrapper p a:hover {
+          color: #000; }
+      #landing .grid-home .grid-wrapper i {
+        font-size: 2em;
+        position: absolute;
+        bottom: 30px;
+        font-weight: 0;
+        transition: all 0.3s; }
 
 #about {
   border-top: 2px solid #fff;
@@ -632,6 +644,8 @@ img {
   #landing .grid-home .grid-wrapper .main-sub {
     font-size: 0.9em;
     padding: 0 40px 0 40px; }
+  #landing .grid-home .grid-wrapper p a i {
+    font-size: 1.5em; }
   #landing#landing {
     background: url("../img/bay.jpg") -200px 0px;
     background-size: cover;
